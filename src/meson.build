@@ -1,10 +1,9 @@
 executable(
 	meson.project_name(),
 
-	'Main.vala',
 	'Application.vala',
 
-	'Widgets/Window.vala',
+	'MainWindow.vala',
 	'Widgets/HeaderBar.vala',
 
 	dependencies: [

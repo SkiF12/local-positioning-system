@@ -8,8 +8,16 @@ public class Application : Gtk.Application {
 	}
 
 	protected override void activate () {
-		var window = new LPS.Window (this);
+		var main_window = new LPS.MainWindow (this);
+		
+		main_window.present ();
+		add_window (main_window);
 
-		add_window (window);
+	}
+
+	public static int main (string[] args) {
+		var app = new Application ();
+	
+		return app.run (args);
 	}
 }

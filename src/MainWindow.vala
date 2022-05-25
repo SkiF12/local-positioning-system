@@ -1,8 +1,8 @@
-public class LPS.Window : Gtk.ApplicationWindow {
-	public GLib.Settings settings;
-	public Gtk.Stack stack { get; set; }
+public class LPS.MainWindow : Gtk.ApplicationWindow {
+	
+	private GLib.Settings settings;
 
-	public Window (Application app) {
+	public MainWindow (Application app) {
 		Object (
 			application: app
 		);
@@ -27,6 +27,7 @@ public class LPS.Window : Gtk.ApplicationWindow {
 	 	show_all ();
 	}
 
+	// remembers the window state
 	public bool before_destroy () {
 		int width, height, x, y;
 
