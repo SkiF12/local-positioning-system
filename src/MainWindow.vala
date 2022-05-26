@@ -1,6 +1,10 @@
 public class LPS.MainWindow : Gtk.ApplicationWindow {
 	
+	private LPS.HeaderBar headerbar;
 	private GLib.Settings settings;
+	private Granite.Dialog? preferences_dialog = null;
+	private Gtk.Image map;
+	private Gtk.Grid main_grid;
 
 	public MainWindow (Application app) {
 		Object (
@@ -21,11 +25,39 @@ public class LPS.MainWindow : Gtk.ApplicationWindow {
 	 		return before_destroy ();
 	 	});
 
-	 	var headerbar = new LPS.HeaderBar (this);
+	 	headerbar = new LPS.HeaderBar (this);
 	 	set_titlebar (headerbar);
+
+		headerbar.load_map_button.clicked.connect (load_map);
+		headerbar.menu_button.clicked.connect (open_preferences);
+		headerbar.save_button.clicked.connect (save_all);
+
+		main_grid = new Gtk.Grid ();
+
+		var gtk_settings = Gtk.Settings.get_default ();
+
+		map = new Gtk.Image.from_file ("/home/flac/Pictures/HBRTDL7D1E8.jpg");
+
+		main_grid.margin = 20;
+		add (main_grid);
+
+		main_grid.attach (map, 0, 0);
 
 	 	show_all ();
 	}
+
+	private void load_map () {
+
+	}
+
+	private void save_all () {
+
+	}
+
+	private void open_preferences () {
+
+	}
+
 
 	// remembers the window state
 	public bool before_destroy () {
