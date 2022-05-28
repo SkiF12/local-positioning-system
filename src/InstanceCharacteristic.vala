@@ -1,4 +1,4 @@
-public class InstanceCharacteristic : Object {
+public class LPS.InstanceCharacteristic : Object {
     public int id             { get; private set; }
     public int instance_id    { get; private set; }
     public string name        { get; private set; }

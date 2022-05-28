@@ -1,4 +1,4 @@
-public class RFIDTag : Object {
+public class LPS.RFIDTag : Object {
     public int id             { get; private set; }
     public int pos_x          { get; private set; }
     public int pos_y          { get; private set; }

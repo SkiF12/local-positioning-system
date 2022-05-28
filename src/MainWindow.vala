@@ -36,18 +36,27 @@ public class LPS.MainWindow : Gtk.ApplicationWindow {
 
 		var gtk_settings = Gtk.Settings.get_default ();
 
-		map = new Gtk.Image.from_file ("/home/flac/Pictures/HBRTDL7D1E8.jpg");
-
 		main_grid.margin = 20;
 		add (main_grid);
-
-		main_grid.attach (map, 0, 0);
 
 	 	show_all ();
 	}
 
 	private void load_map () {
+		var file_chooser = new Gtk.FileChooserNative ("Load map", this, Gtk.FileChooserAction.OPEN, "accept", "cancel");
+		file_chooser.select_multiple = false;
 
+		var res = file_chooser.run ();
+
+		if (res == Gtk.ResponseType.ACCEPT) {
+			var filename = file_chooser.get_file ();
+			
+			main_grid.remove (map);
+			map = new Gtk.Image.from_file (filename.get_parse_name ());
+		}
+
+		main_grid.attach (map, 0, 0);
+		main_grid.show_all ();
 	}
 
 	private void save_all () {

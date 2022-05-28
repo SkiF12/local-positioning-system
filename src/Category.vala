@@ -1,4 +1,4 @@
-public class Category : Object {
+public class LPS.Category : Object {
     public int id       { get; private set; }
     public string title { get; private set; }
 

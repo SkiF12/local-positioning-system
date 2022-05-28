@@ -1,4 +1,4 @@
-public class RFIDReader : Object {
+public class LPS.RFIDReader : Object {
     public int id            { get; private set; }
     public string model_info { get; private set; }
 

@@ -1,4 +1,4 @@
-public class Instance : Object {
+public class LPS.Instance : Object {
     public int id          { get; private set; }
     public string name     { get; private set; }
     public int category_id { get; private set; }

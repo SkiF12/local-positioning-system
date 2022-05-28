@@ -10,6 +10,7 @@ executable(
         'Instance.vala',
         'Category.vala',
         'InstanceCharacteristic.vala',
+        'Utils.vala',
 
 	dependencies: [
         dependency('clutter-gst-3.0'),
