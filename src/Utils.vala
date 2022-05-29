@@ -7,15 +7,6 @@ namespace LPS.Utils {
         int y;
     }
 
-    // draws an instance on map
-    public void draw_instance (ref LPS.Instance Instance, int position_x, int position_y) {
-        
-    }
-
-    // draws all tags on map
-    public void draw_RFID_tags (ref LPS.RFIDTag[] tags) {
-
-    }
 
     // culculates location of the instance based on tags nearby
     public Point find_instance (ref LPS.Instance instance, ref LPS.RFIDTag[] tags_in_range) {

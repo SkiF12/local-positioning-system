@@ -2,9 +2,9 @@ executable(
 	meson.project_name(),
 
 	'Application.vala',
-
 	'MainWindow.vala',
 	'Widgets/HeaderBar.vala',
+        'Widgets/PreferencesDialog.vala',
         'RFIDTag.vala',
         'RFIDReader.vala',
         'Instance.vala',

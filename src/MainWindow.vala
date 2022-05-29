@@ -2,7 +2,7 @@ public class LPS.MainWindow : Gtk.ApplicationWindow {
 	
 	private LPS.HeaderBar headerbar;
 	private GLib.Settings settings;
-	private Granite.Dialog? preferences_dialog = null;
+	private PreferencesDialog preferences_dialog = null;
 	private Gtk.Image map;
 	private Gtk.Grid main_grid;
 
@@ -53,9 +53,9 @@ public class LPS.MainWindow : Gtk.ApplicationWindow {
 			
 			main_grid.remove (map);
 			map = new Gtk.Image.from_file (filename.get_parse_name ());
+			main_grid.attach (map, 0, 0);
 		}
-
-		main_grid.attach (map, 0, 0);
+		
 		main_grid.show_all ();
 	}
 
@@ -64,7 +64,7 @@ public class LPS.MainWindow : Gtk.ApplicationWindow {
 	}
 
 	private void open_preferences () {
-
+		preferences_dialog = new PreferencesDialog (this);
 	}
 
 
