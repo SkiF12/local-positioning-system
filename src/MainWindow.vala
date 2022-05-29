@@ -3,6 +3,7 @@ public class LPS.MainWindow : Gtk.ApplicationWindow {
 	private LPS.HeaderBar headerbar;
 	private GLib.Settings settings;
 	private PreferencesDialog preferences_dialog = null;
+	private EditDialog edit_dialog = null;
 	private Gtk.Image map;
 	private Gtk.Grid main_grid;
 
@@ -65,6 +66,10 @@ public class LPS.MainWindow : Gtk.ApplicationWindow {
 
 	private void open_preferences () {
 		preferences_dialog = new PreferencesDialog (this);
+	}
+
+	private void edit_instance () {
+		edit_dialog = new EditDialog (this);
 	}
 
 

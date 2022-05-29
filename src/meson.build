@@ -5,6 +5,7 @@ executable(
 	'MainWindow.vala',
 	'Widgets/HeaderBar.vala',
         'Widgets/PreferencesDialog.vala',
+        'Widgets/EditDialog.vala',
         'RFIDTag.vala',
         'RFIDReader.vala',
         'Instance.vala',
